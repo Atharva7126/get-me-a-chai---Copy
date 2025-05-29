@@ -39,27 +39,43 @@ export const authoptions = NextAuth({
         // }),
     ],
     callbacks: {
-        async signIn({ user, account, profile, email, credentials }) {
-            if (account.provider == "github") {
-                await connectDB()
-                // Check if the user already exists in the database
-                const currentUser = await User.findOne({ email: email })
+        async signIn({ user, account, profile, email }) {
+            try {
+                await connectDB();
+
+                const currentUser = await User.findOne({ email: user.email });
+
                 if (!currentUser) {
-                    // Create a new user
-                    const newUser = await User.create({
+                    await User.create({
                         email: user.email,
                         username: user.email.split("@")[0],
-                    })
+                    });
                 }
-                return true
+
+                return true;
+            } catch (err) {
+                console.error("Error in signIn callback:", err);
+                return false; // 👈 Prevents crash
             }
         },
 
-        async session({ session, user, token }) {
-            const dbUser = await User.findOne({ email: session.user.email })
-            session.user.name = dbUser.username
-            return session
-        },
+
+        async session({ session }) {
+            try {
+                await connectDB();
+                const dbUser = await User.findOne({ email: session.user.email });
+
+                if (dbUser?.username) {
+                    session.user.name = dbUser.username;
+                }
+
+                return session;
+            } catch (err) {
+                console.error("Session callback error:", err);
+                return session;
+            }
+        }
+        ,
     }
 })
 
