@@ -7,7 +7,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center text-white h-[44vh] gap-5 px-4 text-center">
         <div className="font-bold text-3xl sm:text-4xl flex sm:flex-row justify-center items-center gap-2">
           <span className="mt-2 sm:mt-6">Buy Me A Chai</span>
-          <Image className="invertImg" width={88} src="./tea.gif" alt="Tea" />
+          <Image className="invertImg" width={88} src="/tea.gif" alt="Tea" />
         </div>
         <p className="text-sm sm:text-base max-w-xl">
           A crowdfunding platform for creators. Get funded by your fans and followers.
@@ -37,17 +37,17 @@ export default function Home() {
         <div className="flex flex-col md:flex-row gap-10 justify-around items-center">
           {[
             {
-              src: "./man.gif",
+              src: "/man.gif",
               title: "Get Funded Instantly",
               description: "Let your fans support you directly with a single click."
             },
             {
-              src: "./coin.gif",
+              src: "/coin.gif",
               title: "Earn From Your Passion",
               description: "Turn your creativity into income without middlemen."
             },
             {
-              src: "./group.gif",
+              src: "/group.gif",
               title: "Grow a Loyal Community",
               description: "Build deeper connections with your supporters and fans."
             },

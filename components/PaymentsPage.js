@@ -138,7 +138,7 @@ const PaymentPage = ({ username }) => {
                                 payments && payments.length > 0 ? (
                                     payments.map((payment, index) => (
                                         <li key={index} className='my-1 flex items-center gap-2'>
-                                            <Image width={36} src="./avatar.gif" alt="" />
+                                            <Image width={36} src="/avatar.gif" alt="" />
                                             <span>{payment.name} donated <span className='font-bold'>₹{payment.amount}</span> with a message "{payment.message}"</span>
                                         </li>
                                     ))

@@ -15,7 +15,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between py-2">
                         <Link href={"/"}>
                             <div className='text-xl font-semibold flex items-center mr-16'>
-                                <Image className='mb-3 invertImg' width={50} src="./tea.gif" alt="" />
+                                <Image className='mb-3 invertImg' width={50} src="/tea.gif" alt="" />
                                 <span>GetMeAChai</span>
                             </div>
                         </Link>
