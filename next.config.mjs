@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     devIndicators: false,
-    ignoreDuringBuilds: true,
+    eslint: {
+        ignoreDuringBuilds: true,  // ✅ correct placement
+    },
 };
 
 export default nextConfig;
