@@ -1,0 +1,55 @@
+{
+  "node": {
+    "7f2f5936e73a48b733737ec33b2f72e6557193ddea": {
+      "workers": {
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/useractions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/dashboard/page": "action-browser"
+      }
+    },
+    "7ff47eda1a80a235f564e61b1281835b5850e91998": {
+      "workers": {
+        "app/[username]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[username]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/useractions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/useractions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/[username]/page": "action-browser",
+        "app/dashboard/page": "action-browser"
+      }
+    },
+    "7faf10af0ae48e4e4376e809ed5446dc9fb925fc55": {
+      "workers": {
+        "app/[username]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[username]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/useractions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/[username]/page": "action-browser"
+      }
+    },
+    "7f4d36bf608f0e6f876e00c0f07dc056c9c20a8c8c": {
+      "workers": {
+        "app/[username]/page": {
+          "moduleId": "[project]/.next-internal/server/app/[username]/page/actions.js { ACTIONS_MODULE0 => \"[project]/actions/useractions.js [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/[username]/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "HD01KDV2P3SNaPnifggAgW8CE5kAeLmA3ca9bVRimO8="
+}

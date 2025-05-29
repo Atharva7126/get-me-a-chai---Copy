@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+
+.invertImg {
+    filter: invert(0.23);
+}
+
+/* Dark, visible, and thin scrollbar styles */
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #334155;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0f172a;
+}
+

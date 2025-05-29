@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/HP/Desktop/HTML%2C%20CSS%2C%20JS/Projects/Nextjs%20Project%201%20-%20GetMeAChai/get-me-a-chai/components/SessionWrapper.js"],"sourcesContent":["\"use client\"\r\nimport { SessionProvider } from \"next-auth/react\"\r\n\r\nexport default function SessionWarpper({children}) {\r\n  return (\r\n    <SessionProvider>\r\n      {children}\r\n    </SessionProvider>\r\n  )\r\n}"],"names":[],"mappings":";;;;AACA;AADA;;;AAGe,SAAS,eAAe,EAAC,QAAQ,EAAC;IAC/C,qBACE,8OAAC,8IAAA,CAAA,kBAAe;kBACb;;;;;;AAGP","debugId":null}}]
+}
