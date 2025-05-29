@@ -5,6 +5,7 @@ import { ToastContainer, toast, Bounce } from 'react-toastify'
 import { initiatePayment, fetchPayments, fetchuser } from '@/actions/useractions'
 import { useSession } from 'next-auth/react'
 import { useSearchParams } from 'next/navigation'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { notFound } from "next/navigation"
 
@@ -19,7 +20,7 @@ const PaymentPage = ({ username }) => {
 
     useEffect(() => {
         getData()
-    }, [])
+    }, [getData])
 
     useEffect(() => {
         if (searchParams.get("success") == "true") {
@@ -105,13 +106,13 @@ const PaymentPage = ({ username }) => {
             `}</style>
 
             <div className='relative'>
-                <img
+                <Image
                     className='w-full h-[300px] md:h-[350px] lg:h-[400px] object-cover'
                     src={currentuser.coverpic}
                     alt="Banner"
                 />
                 <div className='absolute -bottom-16 right-1/2 translate-x-1/2 size-40'>
-                    <img
+                    <Image
                         className='rounded-full border-2 border-white size-40 object-cover'
                         width={160}
                         src={currentuser.profilepic}
@@ -137,7 +138,7 @@ const PaymentPage = ({ username }) => {
                                 payments && payments.length > 0 ? (
                                     payments.map((payment, index) => (
                                         <li key={index} className='my-1 flex items-center gap-2'>
-                                            <img width={36} src="./avatar.gif" alt="" />
+                                            <Image width={36} src="./avatar.gif" alt="" />
                                             <span>{payment.name} donated <span className='font-bold'>₹{payment.amount}</span> with a message "{payment.message}"</span>
                                         </li>
                                     ))

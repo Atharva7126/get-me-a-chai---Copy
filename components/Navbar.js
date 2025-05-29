@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import { useSession, signIn, signOut } from "next-auth/react"
+import Image from 'next/image'
 import Link from 'next/link'
 
 const Navbar = () => {
@@ -14,7 +15,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between py-2">
                         <Link href={"/"}>
                             <div className='text-xl font-semibold flex items-center mr-16'>
-                                <img className='mb-3 invertImg' width={50} src="./tea.gif" alt="" />
+                                <Image className='mb-3 invertImg' width={50} src="./tea.gif" alt="" />
                                 <span>GetMeAChai</span>
                             </div>
                         </Link>
@@ -31,7 +32,7 @@ const Navbar = () => {
                                     setTimeout(() => {
                                         setShowdropdown(false)
                                     }, 200);
-                                }} onClick={() => setShowdropdown(!showdropdown)} className="text-white w-fit flex justify-center items-center cursor-pointer bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center space-x-2"><img className='rounded-full' src={session.user.image} alt="" width={24} /> {session.user.name} <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                }} onClick={() => setShowdropdown(!showdropdown)} className="text-white w-fit flex justify-center items-center cursor-pointer bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-2 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-4 py-2 text-center space-x-2"><Image className='rounded-full' src={session.user.image} alt="" width={24} /> {session.user.name} <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                                     </svg>
                                 </button>

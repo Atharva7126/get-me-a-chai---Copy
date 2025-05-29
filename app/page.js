@@ -7,7 +7,7 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center text-white h-[44vh] gap-5 px-4 text-center">
         <div className="font-bold text-3xl sm:text-4xl flex sm:flex-row justify-center items-center gap-2">
           <span className="mt-2 sm:mt-6">Buy Me A Chai</span>
-          <img className="invertImg" width={88} src="./tea.gif" alt="Tea" />
+          <Image className="invertImg" width={88} src="./tea.gif" alt="Tea" />
         </div>
         <p className="text-sm sm:text-base max-w-xl">
           A crowdfunding platform for creators. Get funded by your fans and followers.
@@ -53,7 +53,7 @@ export default function Home() {
             },
           ].map(({ src, title, description }, i) => (
             <div key={i} className="flex flex-col items-center space-y-2 max-w-xs text-center">
-              <img className="bg-slate-500 rounded-full p-2" src={src} alt={title} width={180} />
+              <Image className="bg-slate-500 rounded-full p-2" src={src} alt={title} width={180} />
               <p className="font-bold text-lg">{title}</p>
               <p className="">{description}</p>
             </div>

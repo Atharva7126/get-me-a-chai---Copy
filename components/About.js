@@ -27,7 +27,7 @@ export default function About() {
           <div>
             <h2 className="text-2xl font-semibold mb-3">Why Chai?</h2>
             <p className="leading-relaxed">
-              Chai is more than a drink. It’s a symbol of warmth, connection, and support in many cultures.
+              Chai is more than a drink. It&apos;s a symbol of warmth, connection, and support in many cultures.
               <br />Our platform is built on that spirit — allowing supporters to show their love in the simplest, most heartwarming way.
             </p>
           </div>
@@ -67,7 +67,7 @@ export default function About() {
         <section className="text-center">
           <h2 className="text-2xl font-semibold mb-3">Get In Touch</h2>
           <p className="mb-4">
-            We'd love to hear from you — whether you’re a creator, supporter, or someone with a brilliant idea.
+            We&apos;d love to hear from you — whether you&apos;re a creator, supporter, or someone with a brilliant idea.
           </p>
           <a
             href="mailto:support@buymeachai.com"
