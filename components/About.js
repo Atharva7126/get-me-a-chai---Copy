@@ -1,6 +1,15 @@
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function About() {
+  const [imagesLoaded, setImagesLoaded] = useState(false)
+  if (!imagesLoaded.tea) {
+    return (
+      <div className="w-screen h-screen flex items-center justify-center bg-slate-900">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+      </div>
+    );
+  }
   return (
     <div className="text-white min-h-screen px-4 py-10">
       <div className="max-w-6xl mx-auto space-y-16">
@@ -22,6 +31,7 @@ export default function About() {
             alt="Chai Cup"
             width={300}
             height={300}
+            onLoad={() => setImagesLoaded(prev => ({ ...prev, tea: true }))}
             className="rounded-lg object-contain"
           />
           <div>
