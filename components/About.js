@@ -6,7 +6,7 @@ export default function About() {
   const [imagesLoaded, setImagesLoaded] = useState(false)
   if (!imagesLoaded.tea) {
     return (
-      <div className="w-screen h-screen flex items-center justify-center bg-slate-900">
+      <div className="w-screen h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
       </div>
     );
@@ -32,7 +32,7 @@ export default function About() {
             alt="Chai Cup"
             width={300}
             height={300}
-            onLoad={() => setImagesLoaded(prev => ({ ...prev, tea: true }))}
+            onLoad={() => setImagesLoaded(true)}
             className="rounded-lg object-contain"
           />
           <div>
