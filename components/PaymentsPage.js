@@ -110,6 +110,7 @@ const PaymentPage = ({ username }) => {
             <div className='relative'>
                 <Image
                     className='w-full h-[300px] md:h-[350px] lg:h-[400px] object-cover'
+                    unoptimized
                     src={currentuser.coverpic}
                     alt="Banner"
                 />
@@ -117,6 +118,7 @@ const PaymentPage = ({ username }) => {
                     <Image
                         className='rounded-full border-2 border-white size-40 object-cover'
                         width={160}
+                        unoptimized
                         src={currentuser.profilepic}
                         alt="Profile"
                     />
