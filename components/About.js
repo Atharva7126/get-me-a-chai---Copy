@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export default function About() {
   const [imagesLoaded, setImagesLoaded] = useState(false)
-  if (!imagesLoaded.tea) {
+  if (!imagesLoaded) {
     return (
       <div className="w-screen h-screen flex items-center justify-center">
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
