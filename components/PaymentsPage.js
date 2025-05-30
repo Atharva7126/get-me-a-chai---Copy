@@ -20,7 +20,7 @@ const PaymentPage = ({ username }) => {
 
     useEffect(() => {
         getData()
-    }, [getData])
+    }, [])
 
     useEffect(() => {
         if (searchParams.get("success") == "true") {
@@ -36,8 +36,10 @@ const PaymentPage = ({ username }) => {
                 transition: Bounce
             });
         }
-        router.push(`/${username}`)
-    }, [])
+        if (username) {
+            router.push(`/${username}`);
+        }
+    }, [searchParams, router, username])
 
 
     const handleChange = (e) => {
@@ -86,7 +88,7 @@ const PaymentPage = ({ username }) => {
 
     return (
         <>
-            <ToastContainer/>
+            <ToastContainer />
             <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
 
             <style jsx>{`
