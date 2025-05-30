@@ -1,5 +1,6 @@
+"use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function About() {
   const [imagesLoaded, setImagesLoaded] = useState(false)
